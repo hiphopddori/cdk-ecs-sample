@@ -16,12 +16,12 @@ export class EcsCdkStack extends cdk.Stack {
       vpc,
     });
     */
-    const ddoriVpc = ec2.Vpc.fromLookup(this, 'external-vpc', {
-      vpcName: 'YOUR_VPC_NAME',
+    const ddoriVpc = ec2.Vpc.fromLookup(this, 'vpc-094a3f9428451ac6f', {
+      vpcName: 'Grad2/MainVpc',
     });
-    console.log('vpcId 👉 ', ddoriVpc.vpcId);
-    console.log('vpcCidrBlock 👉 ', ddoriVpc.vpcCidrBlock);
-
+    console.log('ddori-vpcId 👉 ', ddoriVpc.vpcId);
+    console.log('ddori-vpcCidrBlock 👉 ', ddoriVpc.vpcCidrBlock);
+    /*
     const cluster = new ecs.Cluster(this, 'Cluster', {
       vpc: ddoriVpc,
     });
@@ -60,5 +60,6 @@ export class EcsCdkStack extends cdk.Stack {
     // const queue = new sqs.Queue(this, 'EcsCdkQueue', {
     //   visibilityTimeout: cdk.Duration.seconds(300)
     // });
+     */
   }
 }
